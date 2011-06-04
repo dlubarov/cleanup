@@ -1,0 +1,14 @@
+         __                                     
+   ____ |  |   ____ _____    ____  __ __ _____  
+  / ___\|  |  / __ \\__  \  /    \|  |  \  __ \ 
+ (  \___|  |_(  ___/ / __ \|   |  \  |  /  |_) )
+  \_____|____/\___  (_____/|___|\_/____/|   __/ 
+   by Daniel Lubarov daniel@lubarov.com |__|   
+
+Cleanup is small curses program for visually finding and removing large,
+unwanted files. The control are simple:
+    - use the arrow keys to navigate
+    - hit enter to go into a directory
+    - type 'd' to delete a file or directory (not implemented)
+    - type 'q' to quit
+
