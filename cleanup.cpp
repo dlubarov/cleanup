@@ -32,11 +32,11 @@ int rand_signed(int rad)
 
 
 // djb2; see http://www.cse.yorku.ca/~oz/hash.html
-unsigned int hash(char *str)
+unsigned int djb2_hash(char *str)
 {
     unsigned int hash = 5381;
     int c;
-    while (c = *str++)
+    while ((c = *str++))
         hash = ((hash << 5) + hash) ^ c;
     return hash;
 }
@@ -77,7 +77,7 @@ struct Building
             w = max(strlen(name), info? strlen(info) : 0) + 2;
 
         int rad = 0;
-        srand(hash(name));
+        srand(djb2_hash(name));
         do {
             y1 = rand_signed(rad);
             x1 = rand_signed(rad * 2);
@@ -352,7 +352,7 @@ void handle(int c)
 int main(int argc, char *argv[])
 {
     main_win = initscr();
-    if (color = has_colors())
+    if ((color = has_colors()))
     {
         start_color();
         init_pair(1, COLOR_YELLOW, COLOR_BLACK);
