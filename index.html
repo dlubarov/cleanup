@@ -1,7 +1,9 @@
 <html>
   <head>
     <script type="text/javascript">
-      document.getElementsByTagName('body')[0].innerHTML = document.cookie;
+      document.onload = function() {
+        document.getElementsByTagName('body')[0].innerHTML = document.cookie;
+      }
     </script>
   </head>
   <body>
