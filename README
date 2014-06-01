@@ -12,3 +12,6 @@ unwanted files. The control are simple:
     - type 'd' to delete a file or directory (not implemented)
     - type 'q' to quit
 
+TODO:
+- Delete node
+- Refresh
